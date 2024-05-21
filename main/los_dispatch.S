@@ -36,7 +36,7 @@
 .section .text
 .literal_position
 .align 4
-.type HalTaskContextSwitch, %function
+.type HalTaskContextSwitch, @function
 .global HalTaskContextSwitch
 HalTaskContextSwitch:
 
@@ -71,7 +71,7 @@ HalTaskContextSwitch:
     ret                            /* 返回 */
 
 
-.type HakSpillWindow, %function
+.type HakSpillWindow, @function
 .global HakSpillWindow
 HakSpillWindow:
 
@@ -97,7 +97,7 @@ HakSpillWindow:
 
     ret
 
-.type OsStartToRun, %function
+.type OsStartToRun, @function
 .global OsStartToRun
 OsStartToRun:
 

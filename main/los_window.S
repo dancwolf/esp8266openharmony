@@ -34,7 +34,8 @@
 .text
 .align    4
 .literal_position
-.global   SpillWindow
+.type SpillWindow, @function
+.global   SpillWindow 
 SpillWindow:
 
     rsr     a2, WINDOWBASE    /* read windowbase reg */

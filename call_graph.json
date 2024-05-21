@@ -1,1458 +1,232 @@
 {
-    "LOS_Align": {
-        "definition": {
-            "name": "LOS_Align",
-            "signature": "UINT32 (UINT32, UINT32)",
-            "file": "main/test/task_demo.h"
-        },
+    "HandleEntry": {
+        "name": "HandleEntry",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": [
             {
-                "name": "__atomic_test_and_set",
-                "signature": "_Bool (volatile void *, int)",
-                "file": ""
-            },
-            {
-                "name": "__atomic_clear",
-                "signature": "void (volatile void *, int)",
-                "file": ""
-            },
-            {
-                "name": "__atomic_thread_fence",
-                "signature": "void (int)",
-                "file": ""
-            },
-            {
-                "name": "maybe_release_fence",
-                "signature": "void (int)",
-                "file": ""
-            },
-            {
-                "name": "__libatomic_flag_for_address",
-                "signature": "BOOL *(void *)",
-                "file": ""
-            },
-            {
-                "name": "maybe_acquire_fence",
-                "signature": "void (int)",
+                "name": "HalExcHandleEntry",
                 "file": ""
             }
         ]
     },
-    "__atomic_load_8": {
-        "definition": {
-            "name": "__atomic_load_8",
-            "signature": "UINT64 (const volatile void *, int)",
-            "file": "main/test/task_demo.h"
-        },
+    "DebugExceptionHandler": {
+        "name": "DebugExceptionHandler",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": [
             {
-                "name": "free_lock",
-                "signature": "void (void *, int)",
+                "name": "UserException",
+                "file": "main/los_exc.S"
+            }
+        ]
+    },
+    "NMIExceptionHandler": {
+        "name": "NMIExceptionHandler",
+        "signature": "",
+        "file": "main/los_exc.S",
+        "calls": [
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S"
+            }
+        ]
+    },
+    "DoubleExceptionHandler": {
+        "name": "DoubleExceptionHandler",
+        "signature": "",
+        "file": "main/los_exc.S",
+        "calls": [
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S"
+            }
+        ]
+    },
+    "KernelExceptionHandler": {
+        "name": "KernelExceptionHandler",
+        "signature": "",
+        "file": "main/los_exc.S",
+        "calls": [
+            {
+                "name": "KernelException",
                 "file": ""
             },
             {
-                "name": "get_lock",
-                "signature": "void (void *, int)",
+                "name": "UserException",
+                "file": "main/los_exc.S"
+            }
+        ]
+    },
+    "UserExceptionHandler": {
+        "name": "UserExceptionHandler",
+        "signature": "",
+        "file": "main/los_exc.S",
+        "calls": [
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S"
+            }
+        ]
+    },
+    "UserException": {
+        "name": "UserException",
+        "signature": "",
+        "file": "main/los_exc.S",
+        "calls": [
+            {
+                "name": "HandleEntry",
+                "file": "main/los_exc.S"
+            }
+        ]
+    },
+    "AllocHandel": {
+        "name": "AllocHandel",
+        "signature": "",
+        "file": "main/los_exc.S",
+        "calls": [
+            {
+                "name": "AllocHandelEntry",
+                "file": "main/los_exc.S"
+            }
+        ]
+    },
+    "InterruptEntry1": {
+        "name": "InterruptEntry1",
+        "signature": "",
+        "file": "main/los_exc.S",
+        "calls": [
+            {
+                "name": "HalInterrupt",
                 "file": ""
             }
         ]
     },
-    "__atomic_store_8": {
-        "definition": {
-            "name": "__atomic_store_8",
-            "signature": "void (volatile void *, UINT64, int)",
-            "file": "main/test/task_demo.h"
-        },
+    "InterruptEntry2": {
+        "name": "InterruptEntry2",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": [
             {
-                "name": "free_lock",
-                "signature": "void (void *, int)",
-                "file": ""
-            },
-            {
-                "name": "get_lock",
-                "signature": "void (void *, int)",
-                "file": ""
+                "name": "HandleEntry",
+                "file": "main/los_exc.S"
             }
         ]
     },
-    "__atomic_exchange_8": {
-        "definition": {
-            "name": "__atomic_exchange_8",
-            "signature": "UINT64 (volatile void *, UINT64, int)",
-            "file": "main/test/task_demo.h"
-        },
+    "InterruptEntry3": {
+        "name": "InterruptEntry3",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": [
             {
-                "name": "free_lock",
-                "signature": "void (void *, int)",
-                "file": ""
-            },
-            {
-                "name": "get_lock",
-                "signature": "void (void *, int)",
-                "file": ""
+                "name": "HandleEntry",
+                "file": "main/los_exc.S"
             }
         ]
     },
-    "LOS_ListTailInsert": {
-        "definition": {
-            "name": "LOS_ListTailInsert",
-            "signature": "void (LOS_DL_LIST *, LOS_DL_LIST *)",
-            "file": "main/los_event.h"
-        },
+    "InterruptEntry4": {
+        "name": "InterruptEntry4",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": [
             {
-                "name": "LOS_ListAdd",
-                "signature": "void (LOS_DL_LIST *, LOS_DL_LIST *)",
-                "file": ""
+                "name": "HandleEntry",
+                "file": "main/los_exc.S"
             }
         ]
     },
-    "LOS_ListHeadInsert": {
-        "definition": {
-            "name": "LOS_ListHeadInsert",
-            "signature": "void (LOS_DL_LIST *, LOS_DL_LIST *)",
-            "file": "main/los_event.h"
-        },
+    "InterruptEntry5": {
+        "name": "InterruptEntry5",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": [
             {
-                "name": "LOS_ListAdd",
-                "signature": "void (LOS_DL_LIST *, LOS_DL_LIST *)",
-                "file": ""
+                "name": "HandleEntry",
+                "file": "main/los_exc.S"
             }
         ]
     },
-    "LOS_ListDelete": {
-        "definition": {
-            "name": "LOS_ListDelete",
-            "signature": "void (LOS_DL_LIST *)",
-            "file": "main/los_event.h"
-        },
+    "OverFlowGroup1": {
+        "name": "OverFlowGroup1",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": []
     },
-    "LOS_ListEmpty": {
-        "definition": {
-            "name": "LOS_ListEmpty",
-            "signature": "BOOL (LOS_DL_LIST *)",
-            "file": "main/los_event.h"
-        },
+    "UnderFlowGroup1": {
+        "name": "UnderFlowGroup1",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": []
     },
-    "ArchHwiCreate": {
-        "definition": {
-            "name": "ArchHwiCreate",
-            "signature": "UINT32 (HWI_HANDLE_T, HWI_PRIOR_T, HWI_MODE_T, HWI_PROC_FUNC, HwiIrqParam *)",
-            "file": "main/los_context.c"
-        },
+    "OverFlowGroup2": {
+        "name": "OverFlowGroup2",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": []
     },
-    "ArchIntTrigger": {
-        "definition": {
-            "name": "ArchIntTrigger",
-            "signature": "UINT32 (HWI_HANDLE_T)",
-            "file": "main/los_context.c"
-        },
+    "UnderFlowGroup2": {
+        "name": "UnderFlowGroup2",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": []
     },
-    "ArchIntEnable": {
-        "definition": {
-            "name": "ArchIntEnable",
-            "signature": "UINT32 (HWI_HANDLE_T)",
-            "file": "main/los_context.c"
-        },
+    "OverFlowGroup3": {
+        "name": "OverFlowGroup3",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": []
     },
-    "ArchIntDisable": {
-        "definition": {
-            "name": "ArchIntDisable",
-            "signature": "UINT32 (HWI_HANDLE_T)",
-            "file": "main/los_context.c"
-        },
+    "UnderFlowGroup3": {
+        "name": "UnderFlowGroup3",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": []
     },
-    "ArchIntClear": {
-        "definition": {
-            "name": "ArchIntClear",
-            "signature": "UINT32 (HWI_HANDLE_T)",
-            "file": "main/los_context.c"
-        },
+    "AllocHandelEntry": {
+        "name": "AllocHandelEntry",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": []
     },
-    "ArchIntSetPriority": {
-        "definition": {
-            "name": "ArchIntSetPriority",
-            "signature": "UINT32 (HWI_HANDLE_T, HWI_PRIOR_T)",
-            "file": "main/los_context.c"
-        },
+    "EnableExceptionInterface": {
+        "name": "EnableExceptionInterface",
+        "signature": "",
+        "file": "main/los_exc.S",
         "calls": []
     },
-    "ArchIntCurIrqNum": {
-        "definition": {
-            "name": "ArchIntCurIrqNum",
-            "signature": "UINT32 (void)",
-            "file": "main/los_context.c"
-        },
+    "SpillWindow": {
+        "name": "SpillWindow",
+        "signature": "",
+        "file": "main/los_window.S",
         "calls": []
     },
-    "ArchIntOpsGet": {
-        "definition": {
-            "name": "ArchIntOpsGet",
-            "signature": "HwiControllerOps *(void)",
-            "file": "main/los_context.c"
-        },
-        "calls": []
-    },
-    "LOS_ListDelInit": {
-        "definition": {
-            "name": "LOS_ListDelInit",
-            "signature": "void (LOS_DL_LIST *)",
-            "file": "main/los_event.h"
-        },
+    "HalTaskContextSwitch": {
+        "name": "HalTaskContextSwitch",
+        "signature": "",
+        "file": "main/los_dispatch.S",
         "calls": [
             {
-                "name": "LOS_ListInit",
-                "signature": "void (LOS_DL_LIST *)",
-                "file": ""
+                "name": "SaveRetAddr",
+                "file": "main/los_dispatch.S"
             }
         ]
     },
-    "LOS_ErrHandle": {
-        "definition": {
-            "name": "LOS_ErrHandle",
-            "signature": "UINT32 (CHAR *, UINT32, UINT32, UINT32, void *)",
-            "file": "main/los_context.c"
-        },
+    "HakSpillWindow": {
+        "name": "HakSpillWindow",
+        "signature": "",
+        "file": "main/los_dispatch.S",
         "calls": []
     },
-    "OsCycle2MS": {
-        "definition": {
-            "name": "OsCycle2MS",
-            "signature": "UINT64 (UINT64)",
-            "file": "main/los_context.c"
-        },
+    "OsStartToRun": {
+        "name": "OsStartToRun",
+        "signature": "",
+        "file": "main/los_dispatch.S",
         "calls": []
     },
-    "OsCycle2US": {
-        "definition": {
-            "name": "OsCycle2US",
-            "signature": "UINT64 (UINT64)",
-            "file": "main/los_context.c"
-        },
+    "SaveRetAddr": {
+        "name": "SaveRetAddr",
+        "signature": "",
+        "file": "main/los_dispatch.S",
         "calls": []
-    },
-    "OsSortLinkGetRemainTime": {
-        "definition": {
-            "name": "OsSortLinkGetRemainTime",
-            "signature": "UINT64 (UINT64, const SortLinkList *)",
-            "file": "main/los_context.c"
-        },
-        "calls": []
-    },
-    "OsDeleteNodeSortLink": {
-        "definition": {
-            "name": "OsDeleteNodeSortLink",
-            "signature": "void (SortLinkList *)",
-            "file": "main/los_context.c"
-        },
-        "calls": [
-            {
-                "name": "LOS_ListDelete",
-                "signature": "void (LOS_DL_LIST *)",
-                "file": "main/los_event.h"
-            },
-            {
-                "name": "LOS_ListEmpty",
-                "signature": "BOOL (LOS_DL_LIST *)",
-                "file": "main/los_event.h"
-            }
-        ]
-    },
-    "OsGetNextExpireTime": {
-        "definition": {
-            "name": "OsGetNextExpireTime",
-            "signature": "UINT64 (UINT64, UINT32)",
-            "file": "main/los_context.c"
-        },
-        "calls": [
-            {
-                "name": "GetSortLinkNextExpireTime",
-                "signature": "UINT64 (SortLinkAttribute *, UINT64, UINT32)",
-                "file": ""
-            }
-        ]
-    },
-    "OsCurrTaskGet": {
-        "definition": {
-            "name": "OsCurrTaskGet",
-            "signature": "LosTaskCB *(void)",
-            "file": "main/los_context.c"
-        },
-        "calls": []
-    },
-    "OsBackTraceHookSet": {
-        "definition": {
-            "name": "OsBackTraceHookSet",
-            "signature": "void (BACK_TRACE_HOOK)",
-            "file": "main/los_debug.c"
-        },
-        "calls": []
-    },
-    "OsBackTraceHookCall": {
-        "definition": {
-            "name": "OsBackTraceHookCall",
-            "signature": "void (UINTPTR *, UINT32, UINT32, UINTPTR)",
-            "file": "main/los_debug.c"
-        },
-        "calls": [
-            {
-                "name": "printf",
-                "signature": "int (const char *, ...)",
-                "file": ""
-            },
-            {
-                "name": "OsLogLevelCheck",
-                "signature": "INT32 (INT32)",
-                "file": ""
-            }
-        ]
-    },
-    "OsExcHookRegister": {
-        "definition": {
-            "name": "OsExcHookRegister",
-            "signature": "void (ExcHookFn)",
-            "file": "main/los_debug.c"
-        },
-        "calls": [
-            {
-                "name": "ArchIntLock",
-                "signature": "UINT32 (void)",
-                "file": ""
-            },
-            {
-                "name": "ArchIntRestore",
-                "signature": "void (UINT32)",
-                "file": ""
-            }
-        ]
-    },
-    "OsDoExcHook": {
-        "definition": {
-            "name": "OsDoExcHook",
-            "signature": "void (EXC_TYPE)",
-            "file": "main/los_debug.c"
-        },
-        "calls": [
-            {
-                "name": "ArchIntLock",
-                "signature": "UINT32 (void)",
-                "file": ""
-            },
-            {
-                "name": "ArchIntRestore",
-                "signature": "void (UINT32)",
-                "file": ""
-            }
-        ]
-    },
-    "GetCcompare": {
-        "definition": {
-            "name": "GetCcompare",
-            "signature": "UINT32 (void)",
-            "file": "main/los_context.c"
-        },
-        "calls": []
-    },
-    "ArchSysTickTimerGet": {
-        "definition": {
-            "name": "ArchSysTickTimerGet",
-            "signature": "ArchTickTimer *(void)",
-            "file": "main/los_timer.c"
-        },
-        "calls": []
-    },
-    "difftime": {
-        "definition": {
-            "name": "difftime",
-            "signature": "double (time_t, time_t)",
-            "file": "main/semaphore_ex.h"
-        },
-        "calls": []
-    },
-    "nanosleep": {
-        "definition": {
-            "name": "nanosleep",
-            "signature": "int (const struct timespec *, struct timespec *)",
-            "file": "main/semaphore_ex.h"
-        },
-        "calls": []
-    },
-    "clock_nanosleep": {
-        "definition": {
-            "name": "clock_nanosleep",
-            "signature": "int (clockid_t, int, const struct timespec *, struct timespec *)",
-            "file": "main/semaphore_ex.h"
-        },
-        "calls": []
-    },
-    "pthread_equal": {
-        "definition": {
-            "name": "pthread_equal",
-            "signature": "int (pthread_t, pthread_t)",
-            "file": "main/thread_ex.h"
-        },
-        "calls": []
-    },
-    "__pthread_unwind_next": {
-        "definition": {
-            "name": "__pthread_unwind_next",
-            "signature": "void (__pthread_unwind_buf_t *) __attribute__((noreturn))",
-            "file": "main/thread_ex.h"
-        },
-        "calls": []
-    },
-    "GetCcount": {
-        "definition": {
-            "name": "GetCcount",
-            "signature": "UINT32 (void)",
-            "file": "main/los_context.c"
-        },
-        "calls": []
-    },
-    "ResetCcount": {
-        "definition": {
-            "name": "ResetCcount",
-            "signature": "void (void)",
-            "file": "main/los_context.c"
-        },
-        "calls": []
-    },
-    "ArchAtomicRead": {
-        "definition": {
-            "name": "ArchAtomicRead",
-            "signature": "INT32 (const Atomic *)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": []
-    },
-    "ArchAtomicSet": {
-        "definition": {
-            "name": "ArchAtomicSet",
-            "signature": "void (Atomic *, INT32)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": []
-    },
-    "ArchAtomicInc": {
-        "definition": {
-            "name": "ArchAtomicInc",
-            "signature": "void (Atomic *)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": [
-            {
-                "name": "ArchAtomicAdd",
-                "signature": "INT32 (Atomic *, INT32)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchAtomicDec": {
-        "definition": {
-            "name": "ArchAtomicDec",
-            "signature": "void (Atomic *)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": [
-            {
-                "name": "ArchAtomicSub",
-                "signature": "INT32 (Atomic *, INT32)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchAtomicIncRet": {
-        "definition": {
-            "name": "ArchAtomicIncRet",
-            "signature": "INT32 (Atomic *)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": [
-            {
-                "name": "ArchAtomicAdd",
-                "signature": "INT32 (Atomic *, INT32)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchAtomicDecRet": {
-        "definition": {
-            "name": "ArchAtomicDecRet",
-            "signature": "INT32 (Atomic *)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": [
-            {
-                "name": "ArchAtomicSub",
-                "signature": "INT32 (Atomic *, INT32)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchAtomicXchg32bits": {
-        "definition": {
-            "name": "ArchAtomicXchg32bits",
-            "signature": "INT32 (volatile INT32 *, INT32)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": []
-    },
-    "ArchAtomicCmpXchg32bits": {
-        "definition": {
-            "name": "ArchAtomicCmpXchg32bits",
-            "signature": "BOOL (volatile INT32 *, INT32, INT32)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": []
-    },
-    "ArchAtomic64Read": {
-        "definition": {
-            "name": "ArchAtomic64Read",
-            "signature": "INT64 (const Atomic64 *)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": [
-            {
-                "name": "LOS_IntRestore",
-                "signature": "int ()",
-                "file": ""
-            },
-            {
-                "name": "LOS_IntLock",
-                "signature": "int ()",
-                "file": ""
-            }
-        ]
-    },
-    "ArchAtomic64Set": {
-        "definition": {
-            "name": "ArchAtomic64Set",
-            "signature": "void (Atomic64 *, INT64)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": [
-            {
-                "name": "LOS_IntRestore",
-                "signature": "int ()",
-                "file": ""
-            },
-            {
-                "name": "LOS_IntLock",
-                "signature": "int ()",
-                "file": ""
-            }
-        ]
-    },
-    "ArchAtomic64Inc": {
-        "definition": {
-            "name": "ArchAtomic64Inc",
-            "signature": "void (Atomic64 *)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": [
-            {
-                "name": "ArchAtomic64Add",
-                "signature": "INT64 (Atomic64 *, INT64)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchAtomic64IncRet": {
-        "definition": {
-            "name": "ArchAtomic64IncRet",
-            "signature": "INT64 (Atomic64 *)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": [
-            {
-                "name": "ArchAtomic64Add",
-                "signature": "INT64 (Atomic64 *, INT64)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchAtomic64Dec": {
-        "definition": {
-            "name": "ArchAtomic64Dec",
-            "signature": "void (Atomic64 *)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": [
-            {
-                "name": "ArchAtomic64Sub",
-                "signature": "INT64 (Atomic64 *, INT64)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchAtomic64DecRet": {
-        "definition": {
-            "name": "ArchAtomic64DecRet",
-            "signature": "INT64 (Atomic64 *)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": [
-            {
-                "name": "ArchAtomic64Sub",
-                "signature": "INT64 (Atomic64 *, INT64)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchAtomicXchg64bits": {
-        "definition": {
-            "name": "ArchAtomicXchg64bits",
-            "signature": "INT64 (Atomic64 *, INT64)",
-            "file": "main/los_atomic.h"
-        },
-        "calls": [
-            {
-                "name": "LOS_IntRestore",
-                "signature": "int ()",
-                "file": ""
-            },
-            {
-                "name": "LOS_IntLock",
-                "signature": "int ()",
-                "file": ""
-            }
-        ]
-    },
-    "fopen": {
-        "definition": {
-            "name": "fopen",
-            "signature": "FILE *(const char *, const char *)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "freopen": {
-        "definition": {
-            "name": "freopen",
-            "signature": "FILE *(const char *restrict, const char *restrict, FILE *restrict)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "fprintf": {
-        "definition": {
-            "name": "fprintf",
-            "signature": "int (FILE *, const char *, ...)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "vfprintf": {
-        "definition": {
-            "name": "vfprintf",
-            "signature": "int (FILE *, const char *, struct __va_list_tag *)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "snprintf": {
-        "definition": {
-            "name": "snprintf",
-            "signature": "int (char *, unsigned long, const char *, ...)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "vsnprintf": {
-        "definition": {
-            "name": "vsnprintf",
-            "signature": "int (char *, unsigned long, const char *, struct __va_list_tag *)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "vdprintf": {
-        "definition": {
-            "name": "vdprintf",
-            "signature": "int (int, const char *restrict, struct __va_list_tag *)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "dprintf": {
-        "definition": {
-            "name": "dprintf",
-            "signature": "int (int, const char *restrict, ...)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "fscanf": {
-        "definition": {
-            "name": "fscanf",
-            "signature": "int (FILE *restrict, const char *restrict, ...)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "vfscanf": {
-        "definition": {
-            "name": "vfscanf",
-            "signature": "int (FILE *restrict, const char *restrict, struct __va_list_tag *)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "vscanf": {
-        "definition": {
-            "name": "vscanf",
-            "signature": "int (const char *restrict, struct __va_list_tag *)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "vsscanf": {
-        "definition": {
-            "name": "vsscanf",
-            "signature": "int (const char *restrict, const char *restrict, struct __va_list_tag *)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "__getdelim": {
-        "definition": {
-            "name": "__getdelim",
-            "signature": "__ssize_t (char **restrict, size_t *restrict, int, FILE *restrict)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "getdelim": {
-        "definition": {
-            "name": "getdelim",
-            "signature": "__ssize_t (char **restrict, size_t *restrict, int, FILE *restrict)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "getline": {
-        "definition": {
-            "name": "getline",
-            "signature": "__ssize_t (char **restrict, size_t *restrict, FILE *restrict)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "fread": {
-        "definition": {
-            "name": "fread",
-            "signature": "unsigned long (void *, unsigned long, unsigned long, FILE *)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "fwrite": {
-        "definition": {
-            "name": "fwrite",
-            "signature": "unsigned long (const void *, unsigned long, unsigned long, FILE *)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "fread_unlocked": {
-        "definition": {
-            "name": "fread_unlocked",
-            "signature": "size_t (void *restrict, size_t, size_t, FILE *restrict)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "fwrite_unlocked": {
-        "definition": {
-            "name": "fwrite_unlocked",
-            "signature": "size_t (const void *restrict, size_t, size_t, FILE *restrict)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": []
-    },
-    "__bswap_16": {
-        "definition": {
-            "name": "__bswap_16",
-            "signature": "__uint16_t (__uint16_t)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "__bswap_32": {
-        "definition": {
-            "name": "__bswap_32",
-            "signature": "__uint32_t (__uint32_t)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "__bswap_64": {
-        "definition": {
-            "name": "__bswap_64",
-            "signature": "__uint64_t (__uint64_t)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "__uint16_identity": {
-        "definition": {
-            "name": "__uint16_identity",
-            "signature": "__uint16_t (__uint16_t)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "__uint32_identity": {
-        "definition": {
-            "name": "__uint32_identity",
-            "signature": "__uint32_t (__uint32_t)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "__uint64_identity": {
-        "definition": {
-            "name": "__uint64_identity",
-            "signature": "__uint64_t (__uint64_t)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "select": {
-        "definition": {
-            "name": "select",
-            "signature": "int (int, fd_set *restrict, fd_set *restrict, fd_set *restrict, struct timeval *restrict)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "pselect": {
-        "definition": {
-            "name": "pselect",
-            "signature": "int (int, fd_set *restrict, fd_set *restrict, fd_set *restrict, const struct timespec *restrict, const __sigset_t *restrict)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "llabs": {
-        "definition": {
-            "name": "llabs",
-            "signature": "long long (long long)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "div": {
-        "definition": {
-            "name": "div",
-            "signature": "div_t (int, int)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "ldiv": {
-        "definition": {
-            "name": "ldiv",
-            "signature": "ldiv_t (long, long)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "lldiv": {
-        "definition": {
-            "name": "lldiv",
-            "signature": "lldiv_t (long long, long long)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "vsprintf_s": {
-        "definition": {
-            "name": "vsprintf_s",
-            "signature": "int (char *, size_t, const char *, struct __va_list_tag *)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "vsnprintf_s": {
-        "definition": {
-            "name": "vsnprintf_s",
-            "signature": "int (char *, size_t, size_t, const char *, struct __va_list_tag *)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "snprintf_s": {
-        "definition": {
-            "name": "snprintf_s",
-            "signature": "int (char *, size_t, size_t, const char *, ...)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "vsnprintf_truncated_s": {
-        "definition": {
-            "name": "vsnprintf_truncated_s",
-            "signature": "int (char *, size_t, const char *, struct __va_list_tag *)",
-            "file": "main/securec_p.h"
-        },
-        "calls": []
-    },
-    "LOS_SwtmrCreate": {
-        "definition": {
-            "name": "LOS_SwtmrCreate",
-            "signature": "UINT32 (UINT32, UINT8, SWTMR_PROC_FUNC, UINT32 *, UINT32, UINT8, UINT8)",
-            "file": "main/los_hook.h"
-        },
-        "calls": []
-    },
-    "LOS_QueueCreate": {
-        "definition": {
-            "name": "LOS_QueueCreate",
-            "signature": "UINT32 (const CHAR *, UINT16, UINT32 *, UINT32, UINT16)",
-            "file": "main/los_hook.h"
-        },
-        "calls": []
-    },
-    "LOS_QueueReadCopy": {
-        "definition": {
-            "name": "LOS_QueueReadCopy",
-            "signature": "UINT32 (UINT32, void *, UINT32 *, UINT32)",
-            "file": "main/los_hook.h"
-        },
-        "calls": []
-    },
-    "LOS_QueueWriteCopy": {
-        "definition": {
-            "name": "LOS_QueueWriteCopy",
-            "signature": "UINT32 (UINT32, void *, UINT32, UINT32)",
-            "file": "main/los_hook.h"
-        },
-        "calls": []
-    },
-    "LOS_QueueRead": {
-        "definition": {
-            "name": "LOS_QueueRead",
-            "signature": "UINT32 (UINT32, void *, UINT32, UINT32)",
-            "file": "main/los_hook.h"
-        },
-        "calls": []
-    },
-    "LOS_QueueWrite": {
-        "definition": {
-            "name": "LOS_QueueWrite",
-            "signature": "UINT32 (UINT32, void *, UINT32, UINT32)",
-            "file": "main/los_hook.h"
-        },
-        "calls": []
-    },
-    "LOS_QueueWriteHead": {
-        "definition": {
-            "name": "LOS_QueueWriteHead",
-            "signature": "UINT32 (UINT32, void *, UINT32, UINT32)",
-            "file": "main/los_hook.h"
-        },
-        "calls": []
-    },
-    "LOS_QueueWriteHeadCopy": {
-        "definition": {
-            "name": "LOS_QueueWriteHeadCopy",
-            "signature": "UINT32 (UINT32, void *, UINT32, UINT32)",
-            "file": "main/los_hook.h"
-        },
-        "calls": []
-    },
-    "pread": {
-        "definition": {
-            "name": "pread",
-            "signature": "ssize_t (int, void *, size_t, __off_t)",
-            "file": "main/unique_fd.h"
-        },
-        "calls": []
-    },
-    "pwrite": {
-        "definition": {
-            "name": "pwrite",
-            "signature": "ssize_t (int, const void *, size_t, __off_t)",
-            "file": "main/unique_fd.h"
-        },
-        "calls": []
-    },
-    "OsQueueOperate": {
-        "definition": {
-            "name": "OsQueueOperate",
-            "signature": "UINT32 (UINT32, UINT32, void *, UINT32 *, UINT32)",
-            "file": "main/los_hook.h"
-        },
-        "calls": []
-    },
-    "OsGetCurrSchedTimeCycle": {
-        "definition": {
-            "name": "OsGetCurrSchedTimeCycle",
-            "signature": "UINT64 (void)",
-            "file": "main/los_context.c"
-        },
-        "calls": [
-            {
-                "name": "LOS_SysCycleGet",
-                "signature": "UINT64 (void)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchIntUnLock": {
-        "definition": {
-            "name": "ArchIntUnLock",
-            "signature": "UINT32 (void)",
-            "file": "main/los_interrupt.c"
-        },
-        "calls": []
-    },
-    "ArchIntLocked": {
-        "definition": {
-            "name": "ArchIntLocked",
-            "signature": "UINT32 (void)",
-            "file": "main/los_interrupt.c"
-        },
-        "calls": [
-            {
-                "name": "HwiUnmask",
-                "signature": "UINT32 (HWI_HANDLE_T)",
-                "file": ""
-            },
-            {
-                "name": "HwiNumGet",
-                "signature": "UINT32 (void)",
-                "file": ""
-            },
-            {
-                "name": "HwiPending",
-                "signature": "UINT32 (HWI_HANDLE_T)",
-                "file": ""
-            },
-            {
-                "name": "__builtin_ffs",
-                "signature": "int (int)",
-                "file": ""
-            },
-            {
-                "name": "HwiMask",
-                "signature": "UINT32 (HWI_HANDLE_T)",
-                "file": ""
-            },
-            {
-                "name": "HwiNumValid",
-                "signature": "UINT32 (UINT32)",
-                "file": ""
-            },
-            {
-                "name": "HwiClear",
-                "signature": "UINT32 (HWI_HANDLE_T)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchIsIntActive": {
-        "definition": {
-            "name": "ArchIsIntActive",
-            "signature": "UINT32 (void)",
-            "file": "main/los_interrupt.c"
-        },
-        "calls": [
-            {
-                "name": "HalPreInterruptHandler",
-                "signature": "void (UINT32)",
-                "file": ""
-            },
-            {
-                "name": "HalAftInterruptHandler",
-                "signature": "void (UINT32)",
-                "file": ""
-            },
-            {
-                "name": "HwiNumGet",
-                "signature": "UINT32 (void)",
-                "file": ""
-            },
-            {
-                "name": "printf",
-                "signature": "int (const char *, ...)",
-                "file": ""
-            },
-            {
-                "name": "OsLogLevelCheck",
-                "signature": "INT32 (INT32)",
-                "file": ""
-            },
-            {
-                "name": "ArchIntLock",
-                "signature": "UINT32 (void)",
-                "file": ""
-            },
-            {
-                "name": "ArchIntRestore",
-                "signature": "void (UINT32)",
-                "file": ""
-            },
-            {
-                "name": "HalIrqEndCheckNeedSched",
-                "signature": "void (void)",
-                "file": ""
-            },
-            {
-                "name": "HwiClear",
-                "signature": "UINT32 (HWI_HANDLE_T)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchHwiDelete": {
-        "definition": {
-            "name": "ArchHwiDelete",
-            "signature": "UINT32 (HWI_HANDLE_T, HwiIrqParam *)",
-            "file": "main/los_interrupt.c"
-        },
-        "calls": [
-            {
-                "name": "OsExcMemPoolCheckInfo",
-                "signature": "void (void)",
-                "file": ""
-            },
-            {
-                "name": "HalHwiDefaultHandler",
-                "signature": "void (void)",
-                "file": ""
-            },
-            {
-                "name": "printf",
-                "signature": "int (const char *, ...)",
-                "file": ""
-            },
-            {
-                "name": "OsLogLevelCheck",
-                "signature": "INT32 (INT32)",
-                "file": ""
-            },
-            {
-                "name": "ArchIntLock",
-                "signature": "UINT32 (void)",
-                "file": ""
-            },
-            {
-                "name": "ArchIntRestore",
-                "signature": "void (UINT32)",
-                "file": ""
-            },
-            {
-                "name": "HwiMask",
-                "signature": "UINT32 (HWI_HANDLE_T)",
-                "file": ""
-            },
-            {
-                "name": "LOS_CurTaskIDGet",
-                "signature": "UINT32 (void)",
-                "file": ""
-            },
-            {
-                "name": "OsExcRegInfo",
-                "signature": "void (const ExcInfo *)",
-                "file": ""
-            },
-            {
-                "name": "OsExcTypeInfo",
-                "signature": "void (const ExcInfo *)",
-                "file": ""
-            },
-            {
-                "name": "LOS_MemIntegrityCheck",
-                "signature": "UINT32 (const void *)",
-                "file": ""
-            },
-            {
-                "name": "OsGetAllTskInfo",
-                "signature": "UINT32 (void)",
-                "file": ""
-            },
-            {
-                "name": "OsExcCurTaskInfo",
-                "signature": "void (const ExcInfo *)",
-                "file": ""
-            }
-        ]
-    },
-    "HalExcHandleEntry": {
-        "definition": {
-            "name": "HalExcHandleEntry",
-            "signature": "void (UINTPTR, EXC_CONTEXT_S *, UINT32)",
-            "file": "main/los_interrupt.c"
-        },
-        "calls": [
-            {
-                "name": "HwiNumGet",
-                "signature": "UINT32 (void)",
-                "file": ""
-            },
-            {
-                "name": "ArchSysExit",
-                "signature": "void (void) __attribute__((noreturn))",
-                "file": "main/los_context.c"
-            },
-            {
-                "name": "OsExcInfoDisplay",
-                "signature": "void (const ExcInfo *)",
-                "file": ""
-            },
-            {
-                "name": "OsDoExcHook",
-                "signature": "void (EXC_TYPE)",
-                "file": "main/los_debug.c"
-            }
-        ]
-    },
-    "__stack_chk_fail": {
-        "definition": {
-            "name": "__stack_chk_fail",
-            "signature": "void (void)",
-            "file": "main/los_interrupt.c"
-        },
-        "calls": [
-            {
-                "name": "__builtin_return_address",
-                "signature": "void *(unsigned int)",
-                "file": ""
-            },
-            {
-                "name": "LOS_Panic",
-                "signature": "void (const CHAR *, ...) __attribute__((noreturn))",
-                "file": ""
-            }
-        ]
-    },
-    "SetCcompare": {
-        "definition": {
-            "name": "SetCcompare",
-            "signature": "void (UINT32)",
-            "file": "main/los_context.c"
-        },
-        "calls": []
-    },
-    "ArchInit": {
-        "definition": {
-            "name": "ArchInit",
-            "signature": "void (void)",
-            "file": "main/los_context.c"
-        },
-        "calls": [
-            {
-                "name": "HalHwiInit",
-                "signature": "void (void)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchSysExit": {
-        "definition": {
-            "name": "ArchSysExit",
-            "signature": "void (void) __attribute__((noreturn))",
-            "file": "main/los_context.c"
-        },
-        "calls": [
-            {
-                "name": "ArchIntLock",
-                "signature": "UINT32 (void)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchTskStackInit": {
-        "definition": {
-            "name": "ArchTskStackInit",
-            "signature": "void *(UINT32, UINT32, void *)",
-            "file": "main/los_context.c"
-        },
-        "calls": [
-            {
-                "name": "OsTaskEntry",
-                "signature": "void (UINT32)",
-                "file": ""
-            },
-            {
-                "name": "printf",
-                "signature": "int (const char *, ...)",
-                "file": ""
-            },
-            {
-                "name": "memcpy_s",
-                "signature": "errno_t (void *, size_t, const void *, size_t)",
-                "file": ""
-            },
-            {
-                "name": "OsLogLevelCheck",
-                "signature": "INT32 (INT32)",
-                "file": ""
-            }
-        ]
-    },
-    "ArchStartSchedule": {
-        "definition": {
-            "name": "ArchStartSchedule",
-            "signature": "UINT32 (void)",
-            "file": "main/los_context.c"
-        },
-        "calls": [
-            {
-                "name": "ArchIsIntActive",
-                "signature": "UINT32 (void)",
-                "file": "main/los_interrupt.c"
-            },
-            {
-                "name": "HalStartToRun",
-                "signature": "void (void)",
-                "file": ""
-            },
-            {
-                "name": "ArchIntLock",
-                "signature": "UINT32 (void)",
-                "file": ""
-            },
-            {
-                "name": "HalTaskContextSwitch",
-                "signature": "void (void)",
-                "file": ""
-            },
-            {
-                "name": "ArchIntRestore",
-                "signature": "void (UINT32)",
-                "file": ""
-            },
-            {
-                "name": "OsSchedStart",
-                "signature": "void (void)",
-                "file": ""
-            },
-            {
-                "name": "OsSchedTaskSwitch",
-                "signature": "BOOL (void)",
-                "file": ""
-            }
-        ]
-    },
-    "IoTWatchDogEnable": {
-        "definition": {
-            "name": "IoTWatchDogEnable",
-            "signature": "void (void)",
-            "file": "main/hals/driver/hal_watchdog.c"
-        },
-        "calls": [
-            {
-                "name": "WdtEnable",
-                "signature": "void (void)",
-                "file": ""
-            }
-        ]
-    },
-    "IoTWatchDogKick": {
-        "definition": {
-            "name": "IoTWatchDogKick",
-            "signature": "void (void)",
-            "file": "main/hals/driver/hal_watchdog.c"
-        },
-        "calls": [
-            {
-                "name": "WdtFeed",
-                "signature": "void (void)",
-                "file": ""
-            }
-        ]
-    },
-    "LittlefsDriverInit": {
-        "definition": {
-            "name": "LittlefsDriverInit",
-            "signature": "void (int)",
-            "file": "main/fs/littlefs_hal.c"
-        },
-        "calls": []
-    },
-    "FileSystemEntry": {
-        "definition": {
-            "name": "FileSystemEntry",
-            "signature": "void (void)",
-            "file": "main/fs/fs_init.c"
-        },
-        "calls": [
-            {
-                "name": "printf",
-                "signature": "int (const char *, ...)",
-                "file": ""
-            },
-            {
-                "name": "SetDefaultMountPath",
-                "signature": "int ()",
-                "file": ""
-            },
-            {
-                "name": "LittlefsConfigGet",
-                "signature": "int ()",
-                "file": ""
-            },
-            {
-                "name": "mkdir",
-                "signature": "int ()",
-                "file": ""
-            },
-            {
-                "name": "LittlefsDriverInit",
-                "signature": "int ()",
-                "file": "main/fs/littlefs_hal.c"
-            }
-        ]
-    },
-    "TaskSampleEntry2": {
-        "definition": {
-            "name": "TaskSampleEntry2",
-            "signature": "void (void)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": [
-            {
-                "name": "printf",
-                "signature": "int (const char *, ...)",
-                "file": ""
-            },
-            {
-                "name": "LOS_TaskDelay",
-                "signature": "int ()",
-                "file": ""
-            }
-        ]
-    },
-    "TaskSampleEntry1": {
-        "definition": {
-            "name": "TaskSampleEntry1",
-            "signature": "void (void)",
-            "file": "main/test/task_demo.c"
-        },
-        "calls": [
-            {
-                "name": "printf",
-                "signature": "int (const char *, ...)",
-                "file": ""
-            },
-            {
-                "name": "LOS_TaskDelay",
-                "signature": "int ()",
-                "file": ""
-            }
-        ]
     }
 }

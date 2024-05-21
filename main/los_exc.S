@@ -87,6 +87,7 @@ HandleEntry:
 
 .begin      literal_prefix .DebugExceptionHandler
 .section    .DebugExceptionHandler.text, "ax"
+.type       DebugExceptionHandler,@function
 .global     DebugExceptionHandler
 .align      4
 .literal_position
@@ -98,6 +99,7 @@ DebugExceptionHandler:
 
 .begin      literal_prefix .NMIExceptionHandler
 .section    .NMIExceptionHandler.text, "ax"
+.type       NMIExceptionHandler,@function
 .global     NMIExceptionHandler
 .align      4
 .literal_position
@@ -109,6 +111,7 @@ NMIExceptionHandler:
 
 .begin      literal_prefix .DoubleExceptionHandler
 .section    .DoubleExceptionHandler.text, "ax"
+.type       DoubleExceptionHandler,@function
 .global     DoubleExceptionHandler
 .align      4
 .literal_position
@@ -120,6 +123,7 @@ DoubleExceptionHandler:
 
 .begin      literal_prefix .KernelExceptionHandler
 .section    .KernelExceptionHandler.text, "ax"
+.type       KernelExceptionHandler,@function
 .global     KernelExceptionHandler
 .align      4
 .literal_position
