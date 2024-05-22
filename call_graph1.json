@@ -1,0 +1,2216 @@
+{
+    "LOS_Align": {
+        "definition": {
+            "name": "LOS_Align",
+            "signature": "UINT32 (UINT32, UINT32)",
+            "file": "main/hals/driver/hal_watchdog.c"
+        },
+        "calls": [
+            {
+                "name": "__atomic_thread_fence",
+                "signature": "void (int)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "maybe_release_fence",
+                "signature": "void (int)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "__atomic_test_and_set",
+                "signature": "_Bool (volatile void *, int)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "__libatomic_flag_for_address",
+                "signature": "BOOL *(void *)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "maybe_acquire_fence",
+                "signature": "void (int)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "__atomic_clear",
+                "signature": "void (volatile void *, int)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "__atomic_load_8": {
+        "definition": {
+            "name": "__atomic_load_8",
+            "signature": "UINT64 (const volatile void *, int)",
+            "file": "main/hals/driver/hal_watchdog.c"
+        },
+        "calls": [
+            {
+                "name": "get_lock",
+                "signature": "void (void *, int)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "free_lock",
+                "signature": "void (void *, int)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "__atomic_store_8": {
+        "definition": {
+            "name": "__atomic_store_8",
+            "signature": "void (volatile void *, UINT64, int)",
+            "file": "main/hals/driver/hal_watchdog.c"
+        },
+        "calls": [
+            {
+                "name": "get_lock",
+                "signature": "void (void *, int)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "free_lock",
+                "signature": "void (void *, int)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "__atomic_exchange_8": {
+        "definition": {
+            "name": "__atomic_exchange_8",
+            "signature": "UINT64 (volatile void *, UINT64, int)",
+            "file": "main/hals/driver/hal_watchdog.c"
+        },
+        "calls": [
+            {
+                "name": "get_lock",
+                "signature": "void (void *, int)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "free_lock",
+                "signature": "void (void *, int)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchHwiCreate": {
+        "definition": {
+            "name": "ArchHwiCreate",
+            "signature": "UINT32 (HWI_HANDLE_T, HWI_PRIOR_T, HWI_MODE_T, HWI_PROC_FUNC, HwiIrqParam *)",
+            "file": "main/los_tick.h"
+        },
+        "calls": []
+    },
+    "ArchIntTrigger": {
+        "definition": {
+            "name": "ArchIntTrigger",
+            "signature": "UINT32 (HWI_HANDLE_T)",
+            "file": "main/los_tick.h"
+        },
+        "calls": []
+    },
+    "ArchIntEnable": {
+        "definition": {
+            "name": "ArchIntEnable",
+            "signature": "UINT32 (HWI_HANDLE_T)",
+            "file": "main/los_tick.h"
+        },
+        "calls": []
+    },
+    "ArchIntDisable": {
+        "definition": {
+            "name": "ArchIntDisable",
+            "signature": "UINT32 (HWI_HANDLE_T)",
+            "file": "main/los_tick.h"
+        },
+        "calls": []
+    },
+    "ArchIntClear": {
+        "definition": {
+            "name": "ArchIntClear",
+            "signature": "UINT32 (HWI_HANDLE_T)",
+            "file": "main/los_tick.h"
+        },
+        "calls": []
+    },
+    "ArchIntSetPriority": {
+        "definition": {
+            "name": "ArchIntSetPriority",
+            "signature": "UINT32 (HWI_HANDLE_T, HWI_PRIOR_T)",
+            "file": "main/los_tick.h"
+        },
+        "calls": []
+    },
+    "ArchIntCurIrqNum": {
+        "definition": {
+            "name": "ArchIntCurIrqNum",
+            "signature": "UINT32 (void)",
+            "file": "main/los_tick.h"
+        },
+        "calls": []
+    },
+    "ArchIntOpsGet": {
+        "definition": {
+            "name": "ArchIntOpsGet",
+            "signature": "HwiControllerOps *(void)",
+            "file": "main/los_tick.h"
+        },
+        "calls": []
+    },
+    "LOS_ErrHandle": {
+        "definition": {
+            "name": "LOS_ErrHandle",
+            "signature": "UINT32 (CHAR *, UINT32, UINT32, UINT32, void *)",
+            "file": "main/los_tick.h"
+        },
+        "calls": []
+    },
+    "OsCycle2MS": {
+        "definition": {
+            "name": "OsCycle2MS",
+            "signature": "UINT64 (UINT64)",
+            "file": "main/los_tick.h"
+        },
+        "calls": []
+    },
+    "OsCycle2US": {
+        "definition": {
+            "name": "OsCycle2US",
+            "signature": "UINT64 (UINT64)",
+            "file": "main/los_hook_types.h"
+        },
+        "calls": []
+    },
+    "GetCcompare": {
+        "definition": {
+            "name": "GetCcompare",
+            "signature": "UINT32 (void)",
+            "file": "main/los_arch_timer.h"
+        },
+        "calls": []
+    },
+    "ArchSysTickTimerGet": {
+        "definition": {
+            "name": "ArchSysTickTimerGet",
+            "signature": "ArchTickTimer *(void)",
+            "file": "main/los_timer.c"
+        },
+        "calls": []
+    },
+    "LOS_ListTailInsert": {
+        "definition": {
+            "name": "LOS_ListTailInsert",
+            "signature": "void (LOS_DL_LIST *, LOS_DL_LIST *)",
+            "file": "main/los_sortlink.h"
+        },
+        "calls": [
+            {
+                "name": "LOS_ListAdd",
+                "signature": "void (LOS_DL_LIST *, LOS_DL_LIST *)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "LOS_ListHeadInsert": {
+        "definition": {
+            "name": "LOS_ListHeadInsert",
+            "signature": "void (LOS_DL_LIST *, LOS_DL_LIST *)",
+            "file": "main/los_sortlink.h"
+        },
+        "calls": [
+            {
+                "name": "LOS_ListAdd",
+                "signature": "void (LOS_DL_LIST *, LOS_DL_LIST *)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "LOS_ListDelInit": {
+        "definition": {
+            "name": "LOS_ListDelInit",
+            "signature": "void (LOS_DL_LIST *)",
+            "file": "main/los_sortlink.h"
+        },
+        "calls": [
+            {
+                "name": "LOS_ListInit",
+                "signature": "void (LOS_DL_LIST *)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "OsSortLinkGetRemainTime": {
+        "definition": {
+            "name": "OsSortLinkGetRemainTime",
+            "signature": "UINT64 (UINT64, const SortLinkList *)",
+            "file": "main/los_sortlink.h"
+        },
+        "calls": []
+    },
+    "OsDeleteNodeSortLink": {
+        "definition": {
+            "name": "OsDeleteNodeSortLink",
+            "signature": "void (SortLinkList *)",
+            "file": "main/los_sortlink.h"
+        },
+        "calls": [
+            {
+                "name": "LOS_ListEmpty",
+                "signature": "BOOL (LOS_DL_LIST *)",
+                "file": "main/los_memory.h"
+            },
+            {
+                "name": "LOS_ListDelete",
+                "signature": "void (LOS_DL_LIST *)",
+                "file": "main/los_memory.h"
+            }
+        ]
+    },
+    "OsGetNextExpireTime": {
+        "definition": {
+            "name": "OsGetNextExpireTime",
+            "signature": "UINT64 (UINT64, UINT32)",
+            "file": "main/los_sortlink.h"
+        },
+        "calls": [
+            {
+                "name": "GetSortLinkNextExpireTime",
+                "signature": "UINT64 (SortLinkAttribute *, UINT64, UINT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "LOS_SwtmrCreate": {
+        "definition": {
+            "name": "LOS_SwtmrCreate",
+            "signature": "UINT32 (UINT32, UINT8, SWTMR_PROC_FUNC, UINT32 *, UINT32, UINT8, UINT8)",
+            "file": "main/los_hook_types.h"
+        },
+        "calls": []
+    },
+    "OsCurrTaskGet": {
+        "definition": {
+            "name": "OsCurrTaskGet",
+            "signature": "LosTaskCB *(void)",
+            "file": "main/los_hook_types.h"
+        },
+        "calls": []
+    },
+    "OsGetCurrSchedTimeCycle": {
+        "definition": {
+            "name": "OsGetCurrSchedTimeCycle",
+            "signature": "UINT64 (void)",
+            "file": "main/los_interrupt.c"
+        },
+        "calls": [
+            {
+                "name": "HalInterrupt",
+                "signature": "void (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "LOS_SysCycleGet",
+                "signature": "UINT64 (void)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "__bswap_16": {
+        "definition": {
+            "name": "__bswap_16",
+            "signature": "__uint16_t (__uint16_t)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "__bswap_32": {
+        "definition": {
+            "name": "__bswap_32",
+            "signature": "__uint32_t (__uint32_t)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "__bswap_64": {
+        "definition": {
+            "name": "__bswap_64",
+            "signature": "__uint64_t (__uint64_t)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "__uint16_identity": {
+        "definition": {
+            "name": "__uint16_identity",
+            "signature": "__uint16_t (__uint16_t)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "__uint32_identity": {
+        "definition": {
+            "name": "__uint32_identity",
+            "signature": "__uint32_t (__uint32_t)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "__uint64_identity": {
+        "definition": {
+            "name": "__uint64_identity",
+            "signature": "__uint64_t (__uint64_t)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "select": {
+        "definition": {
+            "name": "select",
+            "signature": "int (int, fd_set *restrict, fd_set *restrict, fd_set *restrict, struct timeval *restrict)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "pselect": {
+        "definition": {
+            "name": "pselect",
+            "signature": "int (int, fd_set *restrict, fd_set *restrict, fd_set *restrict, const struct timespec *restrict, const __sigset_t *restrict)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "LOS_ListDelete": {
+        "definition": {
+            "name": "LOS_ListDelete",
+            "signature": "void (LOS_DL_LIST *)",
+            "file": "main/los_memory.h"
+        },
+        "calls": []
+    },
+    "LOS_ListEmpty": {
+        "definition": {
+            "name": "LOS_ListEmpty",
+            "signature": "BOOL (LOS_DL_LIST *)",
+            "file": "main/los_memory.h"
+        },
+        "calls": []
+    },
+    "pread": {
+        "definition": {
+            "name": "pread",
+            "signature": "ssize_t (int, void *, size_t, __off_t)",
+            "file": "main/unique_fd.h"
+        },
+        "calls": []
+    },
+    "pwrite": {
+        "definition": {
+            "name": "pwrite",
+            "signature": "ssize_t (int, const void *, size_t, __off_t)",
+            "file": "main/unique_fd.h"
+        },
+        "calls": []
+    },
+    "difftime": {
+        "definition": {
+            "name": "difftime",
+            "signature": "double (time_t, time_t)",
+            "file": "main/semaphore_ex.h"
+        },
+        "calls": []
+    },
+    "nanosleep": {
+        "definition": {
+            "name": "nanosleep",
+            "signature": "int (const struct timespec *, struct timespec *)",
+            "file": "main/semaphore_ex.h"
+        },
+        "calls": []
+    },
+    "clock_nanosleep": {
+        "definition": {
+            "name": "clock_nanosleep",
+            "signature": "int (clockid_t, int, const struct timespec *, struct timespec *)",
+            "file": "main/semaphore_ex.h"
+        },
+        "calls": []
+    },
+    "pthread_equal": {
+        "definition": {
+            "name": "pthread_equal",
+            "signature": "int (pthread_t, pthread_t)",
+            "file": "main/thread_ex.h"
+        },
+        "calls": []
+    },
+    "__pthread_unwind_next": {
+        "definition": {
+            "name": "__pthread_unwind_next",
+            "signature": "void (__pthread_unwind_buf_t *) __attribute__((noreturn))",
+            "file": "main/thread_ex.h"
+        },
+        "calls": []
+    },
+    "ArchAtomicRead": {
+        "definition": {
+            "name": "ArchAtomicRead",
+            "signature": "INT32 (const Atomic *)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": []
+    },
+    "ArchAtomicSet": {
+        "definition": {
+            "name": "ArchAtomicSet",
+            "signature": "void (Atomic *, INT32)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": []
+    },
+    "ArchAtomicInc": {
+        "definition": {
+            "name": "ArchAtomicInc",
+            "signature": "void (Atomic *)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": [
+            {
+                "name": "ArchAtomicAdd",
+                "signature": "INT32 (Atomic *, INT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchAtomicDec": {
+        "definition": {
+            "name": "ArchAtomicDec",
+            "signature": "void (Atomic *)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": [
+            {
+                "name": "ArchAtomicSub",
+                "signature": "INT32 (Atomic *, INT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchAtomicIncRet": {
+        "definition": {
+            "name": "ArchAtomicIncRet",
+            "signature": "INT32 (Atomic *)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": [
+            {
+                "name": "ArchAtomicAdd",
+                "signature": "INT32 (Atomic *, INT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchAtomicDecRet": {
+        "definition": {
+            "name": "ArchAtomicDecRet",
+            "signature": "INT32 (Atomic *)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": [
+            {
+                "name": "ArchAtomicSub",
+                "signature": "INT32 (Atomic *, INT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchAtomicXchg32bits": {
+        "definition": {
+            "name": "ArchAtomicXchg32bits",
+            "signature": "INT32 (volatile INT32 *, INT32)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": []
+    },
+    "ArchAtomicCmpXchg32bits": {
+        "definition": {
+            "name": "ArchAtomicCmpXchg32bits",
+            "signature": "BOOL (volatile INT32 *, INT32, INT32)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": []
+    },
+    "ArchAtomic64Read": {
+        "definition": {
+            "name": "ArchAtomic64Read",
+            "signature": "INT64 (const Atomic64 *)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": [
+            {
+                "name": "LOS_IntRestore",
+                "signature": "int ()",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "LOS_IntLock",
+                "signature": "int ()",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchAtomic64Set": {
+        "definition": {
+            "name": "ArchAtomic64Set",
+            "signature": "void (Atomic64 *, INT64)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": [
+            {
+                "name": "LOS_IntRestore",
+                "signature": "int ()",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "LOS_IntLock",
+                "signature": "int ()",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchAtomic64Inc": {
+        "definition": {
+            "name": "ArchAtomic64Inc",
+            "signature": "void (Atomic64 *)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": [
+            {
+                "name": "ArchAtomic64Add",
+                "signature": "INT64 (Atomic64 *, INT64)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchAtomic64IncRet": {
+        "definition": {
+            "name": "ArchAtomic64IncRet",
+            "signature": "INT64 (Atomic64 *)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": [
+            {
+                "name": "ArchAtomic64Add",
+                "signature": "INT64 (Atomic64 *, INT64)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchAtomic64Dec": {
+        "definition": {
+            "name": "ArchAtomic64Dec",
+            "signature": "void (Atomic64 *)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": [
+            {
+                "name": "ArchAtomic64Sub",
+                "signature": "INT64 (Atomic64 *, INT64)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchAtomic64DecRet": {
+        "definition": {
+            "name": "ArchAtomic64DecRet",
+            "signature": "INT64 (Atomic64 *)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": [
+            {
+                "name": "ArchAtomic64Sub",
+                "signature": "INT64 (Atomic64 *, INT64)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchAtomicXchg64bits": {
+        "definition": {
+            "name": "ArchAtomicXchg64bits",
+            "signature": "INT64 (Atomic64 *, INT64)",
+            "file": "main/los_arch_atomic.h"
+        },
+        "calls": [
+            {
+                "name": "LOS_IntRestore",
+                "signature": "int ()",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "LOS_IntLock",
+                "signature": "int ()",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "fopen": {
+        "definition": {
+            "name": "fopen",
+            "signature": "FILE *(const char *, const char *)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "freopen": {
+        "definition": {
+            "name": "freopen",
+            "signature": "FILE *(const char *restrict, const char *restrict, FILE *restrict)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "fprintf": {
+        "definition": {
+            "name": "fprintf",
+            "signature": "int (FILE *, const char *, ...)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "vfprintf": {
+        "definition": {
+            "name": "vfprintf",
+            "signature": "int (FILE *, const char *, struct __va_list_tag *)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "snprintf": {
+        "definition": {
+            "name": "snprintf",
+            "signature": "int (char *, unsigned long, const char *, ...)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "vsnprintf": {
+        "definition": {
+            "name": "vsnprintf",
+            "signature": "int (char *, unsigned long, const char *, struct __va_list_tag *)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "vdprintf": {
+        "definition": {
+            "name": "vdprintf",
+            "signature": "int (int, const char *restrict, struct __va_list_tag *)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "dprintf": {
+        "definition": {
+            "name": "dprintf",
+            "signature": "int (int, const char *restrict, ...)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "fscanf": {
+        "definition": {
+            "name": "fscanf",
+            "signature": "int (FILE *restrict, const char *restrict, ...)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "vfscanf": {
+        "definition": {
+            "name": "vfscanf",
+            "signature": "int (FILE *restrict, const char *restrict, struct __va_list_tag *)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "vscanf": {
+        "definition": {
+            "name": "vscanf",
+            "signature": "int (const char *restrict, struct __va_list_tag *)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "vsscanf": {
+        "definition": {
+            "name": "vsscanf",
+            "signature": "int (const char *restrict, const char *restrict, struct __va_list_tag *)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "__getdelim": {
+        "definition": {
+            "name": "__getdelim",
+            "signature": "__ssize_t (char **restrict, size_t *restrict, int, FILE *restrict)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "getdelim": {
+        "definition": {
+            "name": "getdelim",
+            "signature": "__ssize_t (char **restrict, size_t *restrict, int, FILE *restrict)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "getline": {
+        "definition": {
+            "name": "getline",
+            "signature": "__ssize_t (char **restrict, size_t *restrict, FILE *restrict)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "fread": {
+        "definition": {
+            "name": "fread",
+            "signature": "unsigned long (void *, unsigned long, unsigned long, FILE *)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "fwrite": {
+        "definition": {
+            "name": "fwrite",
+            "signature": "unsigned long (const void *, unsigned long, unsigned long, FILE *)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "fread_unlocked": {
+        "definition": {
+            "name": "fread_unlocked",
+            "signature": "size_t (void *restrict, size_t, size_t, FILE *restrict)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "fwrite_unlocked": {
+        "definition": {
+            "name": "fwrite_unlocked",
+            "signature": "size_t (const void *restrict, size_t, size_t, FILE *restrict)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": []
+    },
+    "llabs": {
+        "definition": {
+            "name": "llabs",
+            "signature": "long long (long long)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "div": {
+        "definition": {
+            "name": "div",
+            "signature": "div_t (int, int)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "ldiv": {
+        "definition": {
+            "name": "ldiv",
+            "signature": "ldiv_t (long, long)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "lldiv": {
+        "definition": {
+            "name": "lldiv",
+            "signature": "lldiv_t (long long, long long)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "vsprintf_s": {
+        "definition": {
+            "name": "vsprintf_s",
+            "signature": "int (char *, size_t, const char *, struct __va_list_tag *)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "vsnprintf_s": {
+        "definition": {
+            "name": "vsnprintf_s",
+            "signature": "int (char *, size_t, size_t, const char *, struct __va_list_tag *)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "snprintf_s": {
+        "definition": {
+            "name": "snprintf_s",
+            "signature": "int (char *, size_t, size_t, const char *, ...)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "vsnprintf_truncated_s": {
+        "definition": {
+            "name": "vsnprintf_truncated_s",
+            "signature": "int (char *, size_t, const char *, struct __va_list_tag *)",
+            "file": "main/securec_p.h"
+        },
+        "calls": []
+    },
+    "GetCcount": {
+        "definition": {
+            "name": "GetCcount",
+            "signature": "UINT32 (void)",
+            "file": "main/los_arch_timer.h"
+        },
+        "calls": []
+    },
+    "ResetCcount": {
+        "definition": {
+            "name": "ResetCcount",
+            "signature": "void (void)",
+            "file": "main/los_arch_timer.h"
+        },
+        "calls": []
+    },
+    "SetCcompare": {
+        "definition": {
+            "name": "SetCcompare",
+            "signature": "void (UINT32)",
+            "file": "main/los_context.c"
+        },
+        "calls": []
+    },
+    "ArchInit": {
+        "definition": {
+            "name": "ArchInit",
+            "signature": "void (void)",
+            "file": "main/los_context.c"
+        },
+        "calls": [
+            {
+                "name": "HalHwiInit",
+                "signature": "void (void)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchSysExit": {
+        "definition": {
+            "name": "ArchSysExit",
+            "signature": "void (void) __attribute__((noreturn))",
+            "file": "main/los_context.c"
+        },
+        "calls": [
+            {
+                "name": "ArchIntLock",
+                "signature": "UINT32 (void)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchTskStackInit": {
+        "definition": {
+            "name": "ArchTskStackInit",
+            "signature": "void *(UINT32, UINT32, void *)",
+            "file": "main/los_context.c"
+        },
+        "calls": [
+            {
+                "name": "printf",
+                "signature": "int (const char *, ...)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsTaskEntry",
+                "signature": "void (UINT32)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "memcpy_s",
+                "signature": "errno_t (void *, size_t, const void *, size_t)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsLogLevelCheck",
+                "signature": "INT32 (INT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchStartSchedule": {
+        "definition": {
+            "name": "ArchStartSchedule",
+            "signature": "UINT32 (void)",
+            "file": "main/los_context.c"
+        },
+        "calls": [
+            {
+                "name": "HalStartToRun",
+                "signature": "void (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "ArchIsIntActive",
+                "signature": "UINT32 (void)",
+                "file": "main/los_interrupt.c"
+            },
+            {
+                "name": "ArchIntLock",
+                "signature": "UINT32 (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "ArchIntRestore",
+                "signature": "void (UINT32)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsSchedTaskSwitch",
+                "signature": "BOOL (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HalTaskContextSwitch",
+                "signature": "void (void)",
+                "file": "main/los_dispatch.S"
+            },
+            {
+                "name": "OsSchedStart",
+                "signature": "void (void)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "OsBackTraceHookSet": {
+        "definition": {
+            "name": "OsBackTraceHookSet",
+            "signature": "void (BACK_TRACE_HOOK)",
+            "file": "main/los_debug.c"
+        },
+        "calls": []
+    },
+    "OsBackTraceHookCall": {
+        "definition": {
+            "name": "OsBackTraceHookCall",
+            "signature": "void (UINTPTR *, UINT32, UINT32, UINTPTR)",
+            "file": "main/los_debug.c"
+        },
+        "calls": [
+            {
+                "name": "printf",
+                "signature": "int (const char *, ...)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsLogLevelCheck",
+                "signature": "INT32 (INT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "OsExcHookRegister": {
+        "definition": {
+            "name": "OsExcHookRegister",
+            "signature": "void (ExcHookFn)",
+            "file": "main/los_debug.c"
+        },
+        "calls": [
+            {
+                "name": "ArchIntLock",
+                "signature": "UINT32 (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "ArchIntRestore",
+                "signature": "void (UINT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "OsDoExcHook": {
+        "definition": {
+            "name": "OsDoExcHook",
+            "signature": "void (EXC_TYPE)",
+            "file": "main/los_debug.c"
+        },
+        "calls": [
+            {
+                "name": "ArchIntLock",
+                "signature": "UINT32 (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "ArchIntRestore",
+                "signature": "void (UINT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "LOS_QueueCreate": {
+        "definition": {
+            "name": "LOS_QueueCreate",
+            "signature": "UINT32 (const CHAR *, UINT16, UINT32 *, UINT32, UINT16)",
+            "file": "main/los_hook_types.h"
+        },
+        "calls": []
+    },
+    "LOS_QueueReadCopy": {
+        "definition": {
+            "name": "LOS_QueueReadCopy",
+            "signature": "UINT32 (UINT32, void *, UINT32 *, UINT32)",
+            "file": "main/los_hook_types.h"
+        },
+        "calls": []
+    },
+    "LOS_QueueWriteCopy": {
+        "definition": {
+            "name": "LOS_QueueWriteCopy",
+            "signature": "UINT32 (UINT32, void *, UINT32, UINT32)",
+            "file": "main/los_hook_types.h"
+        },
+        "calls": []
+    },
+    "LOS_QueueRead": {
+        "definition": {
+            "name": "LOS_QueueRead",
+            "signature": "UINT32 (UINT32, void *, UINT32, UINT32)",
+            "file": "main/los_hook_types.h"
+        },
+        "calls": []
+    },
+    "LOS_QueueWrite": {
+        "definition": {
+            "name": "LOS_QueueWrite",
+            "signature": "UINT32 (UINT32, void *, UINT32, UINT32)",
+            "file": "main/los_hook_types.h"
+        },
+        "calls": []
+    },
+    "LOS_QueueWriteHead": {
+        "definition": {
+            "name": "LOS_QueueWriteHead",
+            "signature": "UINT32 (UINT32, void *, UINT32, UINT32)",
+            "file": "main/los_hook_types.h"
+        },
+        "calls": []
+    },
+    "LOS_QueueWriteHeadCopy": {
+        "definition": {
+            "name": "LOS_QueueWriteHeadCopy",
+            "signature": "UINT32 (UINT32, void *, UINT32, UINT32)",
+            "file": "main/los_hook_types.h"
+        },
+        "calls": []
+    },
+    "OsQueueOperate": {
+        "definition": {
+            "name": "OsQueueOperate",
+            "signature": "UINT32 (UINT32, UINT32, void *, UINT32 *, UINT32)",
+            "file": "main/los_hook_types.h"
+        },
+        "calls": []
+    },
+    "ArchIntUnLock": {
+        "definition": {
+            "name": "ArchIntUnLock",
+            "signature": "UINT32 (void)",
+            "file": "main/los_interrupt.c"
+        },
+        "calls": []
+    },
+    "ArchIntLocked": {
+        "definition": {
+            "name": "ArchIntLocked",
+            "signature": "UINT32 (void)",
+            "file": "main/los_interrupt.c"
+        },
+        "calls": [
+            {
+                "name": "HwiMask",
+                "signature": "UINT32 (HWI_HANDLE_T)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "__builtin_ffs",
+                "signature": "int (int)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HwiClear",
+                "signature": "UINT32 (HWI_HANDLE_T)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HwiUnmask",
+                "signature": "UINT32 (HWI_HANDLE_T)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HwiNumGet",
+                "signature": "UINT32 (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HwiPending",
+                "signature": "UINT32 (HWI_HANDLE_T)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HwiNumValid",
+                "signature": "UINT32 (UINT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchIsIntActive": {
+        "definition": {
+            "name": "ArchIsIntActive",
+            "signature": "UINT32 (void)",
+            "file": "main/los_interrupt.c"
+        },
+        "calls": [
+            {
+                "name": "ArchIntLock",
+                "signature": "UINT32 (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "printf",
+                "signature": "int (const char *, ...)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HwiNumGet",
+                "signature": "UINT32 (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "ArchIntRestore",
+                "signature": "void (UINT32)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HwiClear",
+                "signature": "UINT32 (HWI_HANDLE_T)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HalAftInterruptHandler",
+                "signature": "void (UINT32)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HalIrqEndCheckNeedSched",
+                "signature": "void (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HalPreInterruptHandler",
+                "signature": "void (UINT32)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsLogLevelCheck",
+                "signature": "INT32 (INT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "ArchHwiDelete": {
+        "definition": {
+            "name": "ArchHwiDelete",
+            "signature": "UINT32 (HWI_HANDLE_T, HwiIrqParam *)",
+            "file": "main/los_interrupt.c"
+        },
+        "calls": [
+            {
+                "name": "HwiMask",
+                "signature": "UINT32 (HWI_HANDLE_T)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "LOS_CurTaskIDGet",
+                "signature": "UINT32 (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsExcMemPoolCheckInfo",
+                "signature": "void (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsExcRegInfo",
+                "signature": "void (const ExcInfo *)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "ArchIntLock",
+                "signature": "UINT32 (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "printf",
+                "signature": "int (const char *, ...)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "ArchIntRestore",
+                "signature": "void (UINT32)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "HalHwiDefaultHandler",
+                "signature": "void (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "LOS_MemIntegrityCheck",
+                "signature": "UINT32 (const void *)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsExcTypeInfo",
+                "signature": "void (const ExcInfo *)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsGetAllTskInfo",
+                "signature": "UINT32 (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsExcCurTaskInfo",
+                "signature": "void (const ExcInfo *)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsLogLevelCheck",
+                "signature": "INT32 (INT32)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "HalExcHandleEntry": {
+        "definition": {
+            "name": "HalExcHandleEntry",
+            "signature": "void (UINTPTR, EXC_CONTEXT_S *, UINT32)",
+            "file": "main/los_interrupt.c"
+        },
+        "calls": [
+            {
+                "name": "HwiNumGet",
+                "signature": "UINT32 (void)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "OsDoExcHook",
+                "signature": "void (EXC_TYPE)",
+                "file": "main/los_debug.c"
+            },
+            {
+                "name": "ArchSysExit",
+                "signature": "void (void) __attribute__((noreturn))",
+                "file": "main/los_context.c"
+            },
+            {
+                "name": "OsExcInfoDisplay",
+                "signature": "void (const ExcInfo *)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "__stack_chk_fail": {
+        "definition": {
+            "name": "__stack_chk_fail",
+            "signature": "void (void)",
+            "file": "main/los_interrupt.c"
+        },
+        "calls": [
+            {
+                "name": "__builtin_return_address",
+                "signature": "void *(unsigned int)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "LOS_Panic",
+                "signature": "void (const CHAR *, ...) __attribute__((noreturn))",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "LittlefsDriverInit": {
+        "definition": {
+            "name": "LittlefsDriverInit",
+            "signature": "void (int)",
+            "file": "main/fs/littlefs_hal.c"
+        },
+        "calls": []
+    },
+    "FileSystemEntry": {
+        "definition": {
+            "name": "FileSystemEntry",
+            "signature": "void (void)",
+            "file": "main/fs/fs_init.c"
+        },
+        "calls": [
+            {
+                "name": "printf",
+                "signature": "int (const char *, ...)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "LittlefsConfigGet",
+                "signature": "int ()",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "SetDefaultMountPath",
+                "signature": "int ()",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "mkdir",
+                "signature": "int ()",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "LittlefsDriverInit",
+                "signature": "void (int)",
+                "file": "main/fs/littlefs_hal.c"
+            }
+        ]
+    },
+    "TaskSampleEntry2": {
+        "definition": {
+            "name": "TaskSampleEntry2",
+            "signature": "void (void)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": [
+            {
+                "name": "printf",
+                "signature": "int (const char *, ...)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "LOS_TaskDelay",
+                "signature": "int ()",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "TaskSampleEntry1": {
+        "definition": {
+            "name": "TaskSampleEntry1",
+            "signature": "void (void)",
+            "file": "main/test/task_demo.c"
+        },
+        "calls": [
+            {
+                "name": "printf",
+                "signature": "int (const char *, ...)",
+                "file": "main/unknown.c"
+            },
+            {
+                "name": "LOS_TaskDelay",
+                "signature": "int ()",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "IoTWatchDogEnable": {
+        "definition": {
+            "name": "IoTWatchDogEnable",
+            "signature": "void (void)",
+            "file": "main/hals/driver/hal_watchdog.c"
+        },
+        "calls": [
+            {
+                "name": "WdtEnable",
+                "signature": "void (void)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "IoTWatchDogKick": {
+        "definition": {
+            "name": "IoTWatchDogKick",
+            "signature": "void (void)",
+            "file": "main/hals/driver/hal_watchdog.c"
+        },
+        "calls": [
+            {
+                "name": "WdtFeed",
+                "signature": "void (void)",
+                "file": "main/unknown.c"
+            }
+        ]
+    },
+    "SpillWindow": {
+        "definition": {
+            "name": "SpillWindow",
+            "signature": "void (void)",
+            "file": "main/los_window.S"
+        },
+        "calls": []
+    },
+    "HalTaskContextSwitch": {
+        "definition": {
+            "name": "HalTaskContextSwitch",
+            "signature": "void (void)",
+            "file": "main/los_dispatch.S"
+        },
+        "calls": [
+            {
+                "name": "SaveRetAddr",
+                "file": "main/los_dispatch.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "HakSpillWindow": {
+        "definition": {
+            "name": "HakSpillWindow",
+            "signature": "void (void)",
+            "file": "main/los_dispatch.S"
+        },
+        "calls": []
+    },
+    "OsStartToRun": {
+        "definition": {
+            "name": "OsStartToRun",
+            "signature": "void (void)",
+            "file": "main/los_dispatch.S"
+        },
+        "calls": []
+    },
+    "SaveRetAddr": {
+        "definition": {
+            "name": "SaveRetAddr",
+            "signature": "void (void)",
+            "file": "main/los_dispatch.S"
+        },
+        "calls": []
+    },
+    "HandleEntry": {
+        "definition": {
+            "name": "HandleEntry",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HalExcHandleEntry",
+                "file": "main/los_interrupt.c",
+                "signature": "void (UINTPTR, EXC_CONTEXT_S *, UINT32)"
+            }
+        ]
+    },
+    "DebugExceptionHandler": {
+        "definition": {
+            "name": "DebugExceptionHandler",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "NMIExceptionHandler": {
+        "definition": {
+            "name": "NMIExceptionHandler",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "DoubleExceptionHandler": {
+        "definition": {
+            "name": "DoubleExceptionHandler",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "KernelExceptionHandler": {
+        "definition": {
+            "name": "KernelExceptionHandler",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "KernelException",
+                "file": "main/unknown.c",
+                "signature": "void (void)"
+            },
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "UserExceptionHandler": {
+        "definition": {
+            "name": "UserExceptionHandler",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "UserException": {
+        "definition": {
+            "name": "UserException",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HandleEntry",
+                "file": "main/los_exc.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "AllocHandel": {
+        "definition": {
+            "name": "AllocHandel",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "AllocHandelEntry",
+                "file": "main/los_exc.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "InterruptEntry1": {
+        "definition": {
+            "name": "InterruptEntry1",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HalInterrupt",
+                "file": "main/unknown.c",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "InterruptEntry2": {
+        "definition": {
+            "name": "InterruptEntry2",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HandleEntry",
+                "file": "main/los_exc.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "InterruptEntry3": {
+        "definition": {
+            "name": "InterruptEntry3",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HandleEntry",
+                "file": "main/los_exc.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "InterruptEntry4": {
+        "definition": {
+            "name": "InterruptEntry4",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HandleEntry",
+                "file": "main/los_exc.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "InterruptEntry5": {
+        "definition": {
+            "name": "InterruptEntry5",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HandleEntry",
+                "file": "main/los_exc.S",
+                "signature": "void (void)"
+            }
+        ]
+    },
+    "OverFlowGroup1": {
+        "definition": {
+            "name": "OverFlowGroup1",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "UnderFlowGroup1": {
+        "definition": {
+            "name": "UnderFlowGroup1",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "OverFlowGroup2": {
+        "definition": {
+            "name": "OverFlowGroup2",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "UnderFlowGroup2": {
+        "definition": {
+            "name": "UnderFlowGroup2",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "OverFlowGroup3": {
+        "definition": {
+            "name": "OverFlowGroup3",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "UnderFlowGroup3": {
+        "definition": {
+            "name": "UnderFlowGroup3",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "AllocHandelEntry": {
+        "definition": {
+            "name": "AllocHandelEntry",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "EnableExceptionInterface": {
+        "definition": {
+            "name": "EnableExceptionInterface",
+            "signature": "void (void)",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "__atomic_thread_fence": {
+        "definition": {
+            "name": "__atomic_thread_fence",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "maybe_release_fence": {
+        "definition": {
+            "name": "maybe_release_fence",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "__atomic_test_and_set": {
+        "definition": {
+            "name": "__atomic_test_and_set",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "__libatomic_flag_for_address": {
+        "definition": {
+            "name": "__libatomic_flag_for_address",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "maybe_acquire_fence": {
+        "definition": {
+            "name": "maybe_acquire_fence",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "__atomic_clear": {
+        "definition": {
+            "name": "__atomic_clear",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "get_lock": {
+        "definition": {
+            "name": "get_lock",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "free_lock": {
+        "definition": {
+            "name": "free_lock",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "LOS_ListAdd": {
+        "definition": {
+            "name": "LOS_ListAdd",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "LOS_ListInit": {
+        "definition": {
+            "name": "LOS_ListInit",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "GetSortLinkNextExpireTime": {
+        "definition": {
+            "name": "GetSortLinkNextExpireTime",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HalInterrupt": {
+        "definition": {
+            "name": "HalInterrupt",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "LOS_SysCycleGet": {
+        "definition": {
+            "name": "LOS_SysCycleGet",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "ArchAtomicAdd": {
+        "definition": {
+            "name": "ArchAtomicAdd",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "ArchAtomicSub": {
+        "definition": {
+            "name": "ArchAtomicSub",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "LOS_IntRestore": {
+        "definition": {
+            "name": "LOS_IntRestore",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "LOS_IntLock": {
+        "definition": {
+            "name": "LOS_IntLock",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "ArchAtomic64Add": {
+        "definition": {
+            "name": "ArchAtomic64Add",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "ArchAtomic64Sub": {
+        "definition": {
+            "name": "ArchAtomic64Sub",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HalHwiInit": {
+        "definition": {
+            "name": "HalHwiInit",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "ArchIntLock": {
+        "definition": {
+            "name": "ArchIntLock",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "printf": {
+        "definition": {
+            "name": "printf",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "OsTaskEntry": {
+        "definition": {
+            "name": "OsTaskEntry",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "memcpy_s": {
+        "definition": {
+            "name": "memcpy_s",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "OsLogLevelCheck": {
+        "definition": {
+            "name": "OsLogLevelCheck",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HalStartToRun": {
+        "definition": {
+            "name": "HalStartToRun",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "ArchIntRestore": {
+        "definition": {
+            "name": "ArchIntRestore",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "OsSchedTaskSwitch": {
+        "definition": {
+            "name": "OsSchedTaskSwitch",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "OsSchedStart": {
+        "definition": {
+            "name": "OsSchedStart",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HwiMask": {
+        "definition": {
+            "name": "HwiMask",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "__builtin_ffs": {
+        "definition": {
+            "name": "__builtin_ffs",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HwiClear": {
+        "definition": {
+            "name": "HwiClear",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HwiUnmask": {
+        "definition": {
+            "name": "HwiUnmask",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HwiNumGet": {
+        "definition": {
+            "name": "HwiNumGet",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HwiPending": {
+        "definition": {
+            "name": "HwiPending",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HwiNumValid": {
+        "definition": {
+            "name": "HwiNumValid",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HalAftInterruptHandler": {
+        "definition": {
+            "name": "HalAftInterruptHandler",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HalIrqEndCheckNeedSched": {
+        "definition": {
+            "name": "HalIrqEndCheckNeedSched",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HalPreInterruptHandler": {
+        "definition": {
+            "name": "HalPreInterruptHandler",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "LOS_CurTaskIDGet": {
+        "definition": {
+            "name": "LOS_CurTaskIDGet",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "OsExcMemPoolCheckInfo": {
+        "definition": {
+            "name": "OsExcMemPoolCheckInfo",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "OsExcRegInfo": {
+        "definition": {
+            "name": "OsExcRegInfo",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "HalHwiDefaultHandler": {
+        "definition": {
+            "name": "HalHwiDefaultHandler",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "LOS_MemIntegrityCheck": {
+        "definition": {
+            "name": "LOS_MemIntegrityCheck",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "OsExcTypeInfo": {
+        "definition": {
+            "name": "OsExcTypeInfo",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "OsGetAllTskInfo": {
+        "definition": {
+            "name": "OsGetAllTskInfo",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "OsExcCurTaskInfo": {
+        "definition": {
+            "name": "OsExcCurTaskInfo",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "OsExcInfoDisplay": {
+        "definition": {
+            "name": "OsExcInfoDisplay",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "__builtin_return_address": {
+        "definition": {
+            "name": "__builtin_return_address",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "LOS_Panic": {
+        "definition": {
+            "name": "LOS_Panic",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "LittlefsConfigGet": {
+        "definition": {
+            "name": "LittlefsConfigGet",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "SetDefaultMountPath": {
+        "definition": {
+            "name": "SetDefaultMountPath",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "mkdir": {
+        "definition": {
+            "name": "mkdir",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "LOS_TaskDelay": {
+        "definition": {
+            "name": "LOS_TaskDelay",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "WdtEnable": {
+        "definition": {
+            "name": "WdtEnable",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "WdtFeed": {
+        "definition": {
+            "name": "WdtFeed",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    },
+    "KernelException": {
+        "definition": {
+            "name": "KernelException",
+            "signature": "void (void)",
+            "file": "main/unknown.c"
+        },
+        "calls": []
+    }
+}

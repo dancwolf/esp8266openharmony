@@ -1,232 +1,299 @@
 {
-    "HandleEntry": {
-        "name": "HandleEntry",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "HalExcHandleEntry",
-                "file": ""
-            }
-        ]
-    },
-    "DebugExceptionHandler": {
-        "name": "DebugExceptionHandler",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "UserException",
-                "file": "main/los_exc.S"
-            }
-        ]
-    },
-    "NMIExceptionHandler": {
-        "name": "NMIExceptionHandler",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "UserException",
-                "file": "main/los_exc.S"
-            }
-        ]
-    },
-    "DoubleExceptionHandler": {
-        "name": "DoubleExceptionHandler",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "UserException",
-                "file": "main/los_exc.S"
-            }
-        ]
-    },
-    "KernelExceptionHandler": {
-        "name": "KernelExceptionHandler",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "KernelException",
-                "file": ""
-            },
-            {
-                "name": "UserException",
-                "file": "main/los_exc.S"
-            }
-        ]
-    },
-    "UserExceptionHandler": {
-        "name": "UserExceptionHandler",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "UserException",
-                "file": "main/los_exc.S"
-            }
-        ]
-    },
-    "UserException": {
-        "name": "UserException",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "HandleEntry",
-                "file": "main/los_exc.S"
-            }
-        ]
-    },
-    "AllocHandel": {
-        "name": "AllocHandel",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "AllocHandelEntry",
-                "file": "main/los_exc.S"
-            }
-        ]
-    },
-    "InterruptEntry1": {
-        "name": "InterruptEntry1",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "HalInterrupt",
-                "file": ""
-            }
-        ]
-    },
-    "InterruptEntry2": {
-        "name": "InterruptEntry2",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "HandleEntry",
-                "file": "main/los_exc.S"
-            }
-        ]
-    },
-    "InterruptEntry3": {
-        "name": "InterruptEntry3",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "HandleEntry",
-                "file": "main/los_exc.S"
-            }
-        ]
-    },
-    "InterruptEntry4": {
-        "name": "InterruptEntry4",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "HandleEntry",
-                "file": "main/los_exc.S"
-            }
-        ]
-    },
-    "InterruptEntry5": {
-        "name": "InterruptEntry5",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": [
-            {
-                "name": "HandleEntry",
-                "file": "main/los_exc.S"
-            }
-        ]
-    },
-    "OverFlowGroup1": {
-        "name": "OverFlowGroup1",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": []
-    },
-    "UnderFlowGroup1": {
-        "name": "UnderFlowGroup1",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": []
-    },
-    "OverFlowGroup2": {
-        "name": "OverFlowGroup2",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": []
-    },
-    "UnderFlowGroup2": {
-        "name": "UnderFlowGroup2",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": []
-    },
-    "OverFlowGroup3": {
-        "name": "OverFlowGroup3",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": []
-    },
-    "UnderFlowGroup3": {
-        "name": "UnderFlowGroup3",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": []
-    },
-    "AllocHandelEntry": {
-        "name": "AllocHandelEntry",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": []
-    },
-    "EnableExceptionInterface": {
-        "name": "EnableExceptionInterface",
-        "signature": "",
-        "file": "main/los_exc.S",
-        "calls": []
-    },
     "SpillWindow": {
-        "name": "SpillWindow",
-        "signature": "",
-        "file": "main/los_window.S",
+        "definition": {
+            "name": "SpillWindow",
+            "signature": "",
+            "file": "main/los_window.S"
+        },
         "calls": []
     },
     "HalTaskContextSwitch": {
-        "name": "HalTaskContextSwitch",
-        "signature": "",
-        "file": "main/los_dispatch.S",
+        "definition": {
+            "name": "HalTaskContextSwitch",
+            "signature": "",
+            "file": "main/los_dispatch.S"
+        },
         "calls": [
             {
                 "name": "SaveRetAddr",
-                "file": "main/los_dispatch.S"
+                "file": "main/los_dispatch.S",
+                "signature": ""
             }
         ]
     },
     "HakSpillWindow": {
-        "name": "HakSpillWindow",
-        "signature": "",
-        "file": "main/los_dispatch.S",
+        "definition": {
+            "name": "HakSpillWindow",
+            "signature": "",
+            "file": "main/los_dispatch.S"
+        },
         "calls": []
     },
     "OsStartToRun": {
-        "name": "OsStartToRun",
-        "signature": "",
-        "file": "main/los_dispatch.S",
+        "definition": {
+            "name": "OsStartToRun",
+            "signature": "",
+            "file": "main/los_dispatch.S"
+        },
         "calls": []
     },
     "SaveRetAddr": {
-        "name": "SaveRetAddr",
-        "signature": "",
-        "file": "main/los_dispatch.S",
+        "definition": {
+            "name": "SaveRetAddr",
+            "signature": "",
+            "file": "main/los_dispatch.S"
+        },
+        "calls": []
+    },
+    "HandleEntry": {
+        "definition": {
+            "name": "HandleEntry",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HalExcHandleEntry",
+                "file": "",
+                "signature": ""
+            }
+        ]
+    },
+    "DebugExceptionHandler": {
+        "definition": {
+            "name": "DebugExceptionHandler",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S",
+                "signature": ""
+            }
+        ]
+    },
+    "NMIExceptionHandler": {
+        "definition": {
+            "name": "NMIExceptionHandler",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S",
+                "signature": ""
+            }
+        ]
+    },
+    "DoubleExceptionHandler": {
+        "definition": {
+            "name": "DoubleExceptionHandler",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S",
+                "signature": ""
+            }
+        ]
+    },
+    "KernelExceptionHandler": {
+        "definition": {
+            "name": "KernelExceptionHandler",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "KernelException",
+                "file": "",
+                "signature": ""
+            },
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S",
+                "signature": ""
+            }
+        ]
+    },
+    "UserExceptionHandler": {
+        "definition": {
+            "name": "UserExceptionHandler",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "UserException",
+                "file": "main/los_exc.S",
+                "signature": ""
+            }
+        ]
+    },
+    "UserException": {
+        "definition": {
+            "name": "UserException",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HandleEntry",
+                "file": "main/los_exc.S",
+                "signature": ""
+            }
+        ]
+    },
+    "AllocHandel": {
+        "definition": {
+            "name": "AllocHandel",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "AllocHandelEntry",
+                "file": "main/los_exc.S",
+                "signature": ""
+            }
+        ]
+    },
+    "InterruptEntry1": {
+        "definition": {
+            "name": "InterruptEntry1",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HalInterrupt",
+                "file": "",
+                "signature": ""
+            }
+        ]
+    },
+    "InterruptEntry2": {
+        "definition": {
+            "name": "InterruptEntry2",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HandleEntry",
+                "file": "main/los_exc.S",
+                "signature": ""
+            }
+        ]
+    },
+    "InterruptEntry3": {
+        "definition": {
+            "name": "InterruptEntry3",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HandleEntry",
+                "file": "main/los_exc.S",
+                "signature": ""
+            }
+        ]
+    },
+    "InterruptEntry4": {
+        "definition": {
+            "name": "InterruptEntry4",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HandleEntry",
+                "file": "main/los_exc.S",
+                "signature": ""
+            }
+        ]
+    },
+    "InterruptEntry5": {
+        "definition": {
+            "name": "InterruptEntry5",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": [
+            {
+                "name": "HandleEntry",
+                "file": "main/los_exc.S",
+                "signature": ""
+            }
+        ]
+    },
+    "OverFlowGroup1": {
+        "definition": {
+            "name": "OverFlowGroup1",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "UnderFlowGroup1": {
+        "definition": {
+            "name": "UnderFlowGroup1",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "OverFlowGroup2": {
+        "definition": {
+            "name": "OverFlowGroup2",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "UnderFlowGroup2": {
+        "definition": {
+            "name": "UnderFlowGroup2",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "OverFlowGroup3": {
+        "definition": {
+            "name": "OverFlowGroup3",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "UnderFlowGroup3": {
+        "definition": {
+            "name": "UnderFlowGroup3",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "AllocHandelEntry": {
+        "definition": {
+            "name": "AllocHandelEntry",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
+        "calls": []
+    },
+    "EnableExceptionInterface": {
+        "definition": {
+            "name": "EnableExceptionInterface",
+            "signature": "",
+            "file": "main/los_exc.S"
+        },
         "calls": []
     }
 }

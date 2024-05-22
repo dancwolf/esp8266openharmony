@@ -17,9 +17,9 @@ def parse_asm_file(filepath):
             # Save the previous function and its calls
             if current_function:
                 functions[current_function] = {
-                    "name": current_function,
+                    "definition": {"name": current_function,
                     "signature": "",
-                    "file": filepath,
+                    "file": filepath},
                     "calls": calls
                 }
             current_function = match_def.group(1)
@@ -32,15 +32,16 @@ def parse_asm_file(filepath):
             called_function = match_call.group(1)
             calls.append({
                 "name": called_function,
-                "file": ""  # To be filled in later
+                "file": "",  # To be filled in later
+                "signature":""
             })
 
     # Save the last function
     if current_function:
         functions[current_function] = {
-            "name": current_function,
+            "definition": {"name": current_function,
             "signature": "",
-            "file": filepath,
+            "file": filepath},
             "calls": calls
         }
 
@@ -60,7 +61,8 @@ def parse_directory(directory):
     for func in all_functions.values():
         for call in func["calls"]:
             if call["name"] in all_functions:
-                call["file"] = all_functions[call["name"]]["file"]
+                call["file"] = all_functions[call["name"]]['definition']["file"]
+                call["signature"] = all_functions[call["name"]]['definition']["signature"]
 
     return all_functions
 
